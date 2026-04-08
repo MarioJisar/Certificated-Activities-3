@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es-Es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="@mjs">
+    <title>Ejercicio 37 - Formularios</title>
+    <link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+
+<body>
+    <h1>Email</h1>
+    <form action="https://jsonplaceholder.typicode.com/users" method="post"
+        onsubmit="alert('Email validado correctamente.')">
+        <label for="mail">Introduce un correo electrónico: </label><br>
+        <input type="email" id="mail" name="mail" required><br><br>
+        <input type="submit" value="Validar">
+    </form>
+</body>
+
+</html>

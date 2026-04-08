@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es-Es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="@mjs">
+    <title>Ejercicio 43 - Formularios</title>
+    <link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+
+<body>
+    <h1>Search</h1>
+    <form action="https://jsonplaceholder.typicode.com/users" method="get"
+        onsubmit="alert('Consulta realizada correctamente.')">
+        <label for="busqueda">Busca en la base de datos: </label><br>
+        <input type="search" id="busqueda" name="busqueda" placeholder="Buscar...">
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+
+</html>

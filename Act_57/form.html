@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es-Es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="@mjs">
+    <title>Formulario agencia</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <h1>Formulario de consulta para viaje</h1>
+    <h2>Rellena el siguiente formulario para que nuestra agencia pueda prepararte una propuesta de viaje.</h2>
+
+    <form action="https://jsonplaceholder.typicode.com/users/" method="post"
+        onsubmit="alert('formulario enviado correctamente.')" onreset="alert('Datos borrados')" id="formulario"
+        target="_blank" autocomplete="on" accept-charset="UTF-8" enctype="application/x-www-form-urlencoded">
+        <p><span>* obligatorios</span></p>
+        <fieldset>
+            <legend>Datos de contacto</legend>
+
+            <label for="nombre">Nombre: <span>*</span></label>
+            <input class="style" type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre" required><br>
+
+            <label for="apellidos">Apellidos: <span>*</span></label>
+            <input class="style" type="text" id="apellidos" name="apellidos" placeholder="Introduce tus apellidos"
+                required><br>
+
+            <label for="mail">Correo electrónico: <span>*</span></label>
+            <input class="style" type="email" id="mail" name="mail" placeholder="ejemplo@email.com" required><br>
+
+            <label for="telefono">Teléfono: <span>*</span></label>
+            <input class="style" type="tel" id="telefono" name="telefono" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"
+                placeholder="Ej: 123-456-789" required><br>
+
+            <label>Sexo:</label><br>
+            <label for="hombre">Hombre</label>
+            <input type="radio" id="hombre" name="sexo">
+
+            <label for="mujer">Mujer</label>
+            <input type="radio" id="mujer" name="sexo">
+
+            <label for="otro">Otro</label>
+            <input type="radio" id="otro" name="sexo"><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Fechas del viaje</legend>
+
+            <label for="horaSalida">Fecha y hora de salida: <span>*</span></label>
+            <input type="datetime-local" id="horaSalida" name="horaSalida" required><br>
+
+            <label for="horaLlegada">Fecha y hora de llegada: <span>*</span></label>
+            <input type="datetime-local" id="horaLlegada" name="horaLlegada" required><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Destinos de interés</legend>
+
+            <h3>Europa:</h3>
+            <label for="spain">España</label>
+            <input type="checkbox" id="spain" name="destino" value="spain">
+
+            <label for="italy">Italia</label>
+            <input type="checkbox" id="italy" name="destino" value="italy">
+
+            <label for="greece">Grecia</label>
+            <input type="checkbox" id="greece" name="destino" value="greece"><br>
+
+            <h3>Asia:</h3>
+            <label for="japan">Japón</label>
+            <input type="checkbox" id="japan" name="destino" value="japan">
+
+            <label for="southKorea">Corea del Sur</label>
+            <input type="checkbox" id="southKorea" name="destino" value="southKorea">
+
+            <label for="china">China</label>
+            <input type="checkbox" id="china" name="destino" value="china"><br>
+
+            <div class="desactivado">
+                <h3>Latam:</h3>
+                <h4>Próximamente</h4>
+                <label for="mexico">México</label>
+                <input type="checkbox" id="mexico" name="destino" value="mexico" disabled>
+
+                <label for="colombia">Colombia</label>
+                <input type="checkbox" id="colombia" name="destino" value="colombia" disabled>
+
+                <label for="venezuela">Venezuela</label>
+                <input type="checkbox" id="venezuela" name="destino" value="venezuela" disabled><br>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Información del viajero</legend>
+
+            <div class="inline">
+                <label for="paises">País de residencia: <span>*</span></label>
+                <select name="pais" id="paises" required>
+                    <optgroup label="Europa">
+                        <option value="spain">España</option>
+                        <option value="italy">Italia</option>
+                        <option value="greece">Grecia</option>
+                        <option value="portugal">Portugal</option>
+                        <option value="belgium">Bélgica</option>
+                        <option value="norway">Noruega</option>
+                    </optgroup>
+
+                    <optgroup label="Asia">
+                        <option value="japan">Japón</option>
+                        <option value="southKorea">Corea del Sur</option>
+                        <option value="china">China</option>
+                        <option value="vietnam">Vietnam</option>
+                        <option value="thailand">Tailandia</option>
+                    </optgroup>
+
+                    <optgroup label="Latam">
+                        <option value="colombia">Colombia</option>
+                        <option value="venezuela">Venezuela</option>
+                        <option value="mexico">México</option>
+                        <option value="ecuador">Ecuador</option>
+                        <option value="jamaica">Jamaica</option>
+                        <option value="brasil">Brasil</option>
+                    </optgroup>
+                </select>
+
+                <label for="transporte">Transporte preferido:</label>
+                <input class="style" type="text" id="transporte" name="transporte" list="listaTransporte"
+                    placeholder="Avión / Tren / Barco / Autobús">
+
+                <datalist id="listaTransporte">
+                    <option value="Avión">
+                    <option value="Tren">
+                    <option value="Barco">
+                    <option value="Autobús">
+                </datalist>
+            </div>
+        </fieldset>
+
+        <input type="hidden" name="oculto" value="easter egg">
+
+        <fieldset>
+            <legend>Información adicional</legend>
+
+            <label for="seccionComentario">Comentraios o peticiones especiales:</label><br>
+            <textarea name="comment" id="seccionComentario" form="formulario" maxlength="500" cols="40" rows="5"
+                placeholder="Indica preferencias de hotel, presupuesto aproximado, etc."></textarea><br>
+
+            <label for="documento">Subir documento (pasaporte, referencia, etc.): <span>*</span></label>
+            <input type="file" id="documento" name="documento" required><br>
+
+            <label for="busuqeda">Buscar opciones en el formulario:</label>
+            <input class="style" type="search" id="busuqeda" name="busuqeda" placeholder="Buscar..."><br>
+
+            <label for="satisfaccion">Nivel de interés por el viaje (0 bajo - 10 alto):</label>
+            <input class="style" type="range" id="satisfaccion" name="satisfaccion" min="0" max="10">
+        </fieldset>
+
+        <div class="pieFormulario">
+            <button type="button" onclick="rellenarFormulario()">
+                <img src="images/loadButton.png" alt="Cargar datos" width="200">
+            </button>
+
+            <input type="image" src="images/submitButton.png" alt="Enviar formulario" width="200">
+
+            <button type="reset">
+                <img src="images/resetButton.png" alt="Resetear formulario" width="200">
+            </button><br>
+
+            <input type="submit" value="Enviar sin validar" formnovalidate>
+
+            <input type="button" onclick="alert('Completa el formulario')" value="Mensaje"><br>
+
+            <a href="index.html">Volver a la página principal</a>
+        </div>
+
+    </form>
+
+    <script>
+        function rellenarFormulario() {
+            document.getElementById("nombre").value="Aritz";
+            document.getElementById("apellidos").value="Velasco";
+            document.getElementById("mail").value="alumno@core.com";
+            document.getElementById("telefono").value="636-424-797";
+            document.getElementById("horaSalida").value="2026-03-10T13:53";
+            document.getElementById("horaLlegada").value="2026-03-28T13:57";
+            document.getElementById("hombre").checked=true;
+            document.getElementById("greece").checked=true;
+            document.getElementById("japan").checked=true;
+            document.getElementById("southKorea").checked=true;
+            document.getElementById("paises").value="venezuela";
+            document.getElementById("transporte").value="Avión";
+            document.getElementById("seccionComentario").value="Hotel cerca de la playa, restaurantes que acepten mascotas y planes con niños pequeños.";
+            document.getElementById("busqueda").value="Hotel 5 estrellas"; /* arreglar */
+            document.getElementById("satisfaccion").value="9";
+        }
+    </script>
+</body>
+
+</html>

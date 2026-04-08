@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es-Es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="@mjs">
+    <title>Ejercicio 44 - Formularios</title>
+    <link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+
+<body>
+    <h1>Tel</h1>
+    <form action="https://jsonplaceholder.typicode.com/users" method="post"
+        onsubmit="alert('Consulta realizada correctamente.')">
+        <label for="tel1">Introduce un número de teléfono: </label><br>
+        <input type="tel" id="tel1" name="tel1" placeholder="Formato: 123-456-789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required><br>
+        <label for="tel2">Introduce un número de teléfono: </label><br>
+        <input type="tel" id="tel2" name="tel2" placeholder="Formato: +34 123 456 789" pattern="^\+34\s[0-9]{3}\s[0-9]{3}\s[0-9]{3}$" required><br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+
+</html>

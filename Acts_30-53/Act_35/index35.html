@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es-Es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="@mjs">
+    <title>Ejercicio 35 - Formularios</title>
+    <link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+
+<body>
+    <h1>Date</h1>
+    <form action="https://jsonplaceholder.typicode.com/users" method="post"
+        onsubmit="alert('Fechas seleccionadas correctamente.')">
+        <label for="birthDate">Seleccione una fecha: </label>
+        <input type="date" id="birthDate" name="birthDate" required><br><br>
+        <label for="date1">Seleccione una fecha a partir del 08/septiembre/1986: </label>
+        <input type="date" id="date1" name="date1" min="1986-09-08" required><br><br>
+        <label for="date2">Seleccione una fecha hasta el 03/febrero/2004: </label>
+        <input type="date" id="date2" name="date2" max="2004-02-03" required><br><br>
+        <label for="date3">Seleccione fecha y hora: </label>
+        <input type="datetime-local" id="date3" name="date3" required><br><br>
+        <label for="date4">Seleccione mes y año: </label>
+        <input type="month" id="date4" name="date4" required><br><br>
+        <label for="date5">Seleccione una fecha entre 15/diciembre/1999 y 15/enero/2000: </label>
+        <input type="date" id="date5" name="date5" max="2000-01-15" min="1999-12-15" required><br><br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+
+</html>

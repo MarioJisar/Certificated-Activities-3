@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es-Es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="@mjs">
+    <title>Ejercicio 46 - Formularios</title>
+    <link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+
+<body>
+    <h1>Url</h1>
+    <form action="https://jsonplaceholder.typicode.com/users" method="post"
+        onsubmit="alert('Consulta realizada correctamente.')">
+        <label for="url1">Indique una url válida: </label><br>
+        <input type="url" id="url1" name="url1" pattern="https://.+" placeholder="https://" required><br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+body {
+    background-image: url(images/sunflowers.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+label,
+input,
+button {
+    margin: 10px;
+}
+
+form {
+    background-image: url(images/pixelart.gif);
+    background-size: 100% 100%;
+}

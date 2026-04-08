@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es-Es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="@mjs">
+    <title>Ejercicio 54 - Formularios</title>
+    <style>
+        body {
+            text-align: center;
+            background-image: url(images/worldwideweb.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        label,
+        input {
+            margin: 8px;
+        }
+
+        button {
+            margin-bottom: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Formulario HTML Completo</h1>
+    <form action="https://jsonplaceholder.typicode.com/users" method="post"
+        onsubmit="alert('Formulario enviado correctamente.')" onreset="alert('Datos borrados')" id="formulario"
+        target="_blank" autocomplete="on" accept-charset="UTF-8">
+        <fieldset>
+            <legend>Datos personales</legend>
+            <label for="name">Nombre: </label>
+            <input type="text" id="name" name="name" placeholder="Introduce su nombre" required><br>
+            <label for="psw">Contraseña: </label>
+            <input type="password" id="psw" name="psw" placeholder="Indique su contraseña" required><br>
+            <label for="mail">Correo electrónico: </label>
+            <input type="email" id="mail" name="mail" pattern="^[a-z]+@[a-z]+\.com$" placeholder="example@example.com"
+                required><br>
+            <label for="mobile">Teléfono: </label>
+            <input type="tel" id="mobile" name="mobile" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"
+                placeholder="Ej: 123-456-789" required><br>
+            <label for="web">Página web: </label>
+            <input type="url" id="web" name="web" pattern="^https://.+$" placeholder="https://" required><br>
+            <label for="age">Edad: </label>
+            <input type="number" id="age" name="age" step="1" min="16" placeholder="A partir de 16 años"><br>
+            <label for="color">Color favorito: </label>
+            <input type="color" id="color" name="color" value="#FA8072">
+        </fieldset>
+        <fieldset>
+            <legend>Fecha</legend>
+            <label for="date">Fecha: </label>
+            <input type="date" id="date" name="date" required><br>
+            <label for="hour">Hora: </label>
+            <input type="time" id="hour" name="hour" required><br>
+            <label for="localtime">Fecha y hora: </label>
+            <input type="datetime-local" id="localtime" name="localtime" required><br>
+            <label for="month">Mes: </label>
+            <input type="month" id="month" name="month" required><br>
+            <label for="week">Semana: </label>
+            <input type="week" id="week" name="week" required><br>
+        </fieldset>
+        <fieldset>
+            <legend>Opciones</legend>
+            <label for="sex">Seleccione su género: </label><br>
+            <label for="male">Hombre</label>
+            <input type="radio" id="male" name="genre">
+            <label for="female">Mujer</label>
+            <input type="radio" id="female" name="genre">
+            <label for="other">Otro</label>
+            <input type="radio" id="other" name="genre"><br>
+            <label for="modules">Módulos cursados: </label><br>
+            <label for="UF1302">UF1302</label>
+            <input type="checkbox" id="UF1302" name="UF1302">
+            <label for="UF1303">UF1303</label>
+            <input type="checkbox" id="UF1303" name="UF1303">
+            <label for="UF1304">UF1304</label>
+            <input type="checkbox" id="UF1304" name="UF1304" disabled><br>
+        </fieldset>
+        <fieldset>
+            <legend>Lista desplegable</legend>
+            <label for="countries">País: </label>
+            <select name="contry" id="countries" required>
+                <optgroup label="Europa">
+                    <option value="spain">España</option>
+                    <option value="italy">Italia</option>
+                    <option value="greece">Grecia</option>
+                    <option value="portugal">Portugal</option>
+                    <option value="belgium">Bélgica</option>
+                    <option value="norway">Noruega</option>
+                </optgroup>
+                <optgroup label="Asia">
+                    <option value="japan">Japón</option>
+                    <option value="southKorea">Corea del Sur</option>
+                    <option value="china">China</option>
+                    <option value="vietnam">Vietnam</option>
+                    <option value="thailand">Tailandia</option>
+                </optgroup>
+                <optgroup label="Latam">
+                    <option value="colombia">Colombia</option>
+                    <option value="venezuela">Venezuela</option>
+                    <option value="mexico">México</option>
+                    <option value="ecuador">Ecuador</option>
+                    <option value="jamaica">Jamaica</option>
+                    <option value="brasil">Brasil</option>
+                </optgroup>
+            </select><br>
+            <label for="webs">Navegador favorito: </label>
+            <input type="text" id="webs" list="webList" required>
+            <datalist id="webList">
+                <option value="googleChrome">Google Chrome</option>
+                <option value="duckDuckGo">Duck Duck GO</option>
+                <option value="firefox">Firefox</option>
+                <option value="opera">Opera</option>
+            </datalist>
+            <input type="hidden" name="hidden" value="easter egg">
+        </fieldset>
+        <fieldset>
+            <legend>Otros datos</legend>
+            <label for="commentSection">Comentarios: </label><br>
+            <textarea name="comment" id="commentSection" form="formulario" maxlength="500" cols="40" rows="5" required
+                placeholder="Deja tu comentario:"></textarea><br>
+            <label for="file1">Subir archivo: </label>
+            <input type="file" id="file1" name="file1" required><br>
+            <label for="search">Buscar: </label>
+            <input type="search" id="search" name="search" placeholder="Search..." required><br>
+            <label for="satisfaction">Nivel de satisfacción (0-10): </label>
+            <input type="range" id="satisfaction" name="satisfaction" min="0" max="10" required>
+        </fieldset>
+        <input type="image" src="images/sendButton.png"><br>
+        <input type="submit" value="Enviar">
+        <input type="submit" value="Enviar sin validar" formnovalidate>
+        <input type="reset" value="Reestablecer">
+        <input type="button" onclick="alert('Completa el formulario')" value="Mensaje">
+    </form>
+</body>
+
+</html>

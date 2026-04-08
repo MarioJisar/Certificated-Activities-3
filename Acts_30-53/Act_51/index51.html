@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es-Es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="@mjs">
+    <title>Ejercicio 51 - Formularios</title>
+    <link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+
+<body>
+    <h1>Formulario</h1>
+
+    <form action="https://jsonplaceholder.typicode.com/users" method="post"
+        onsubmit="alert('Formulario enviado correctamente.')">
+        <label for="name">Nombre: </label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="lastname1">Primer apellido: </label><br>
+        <input type="text" id="lastname1" name="lastname1" required><br><br>
+        <label for="lastname2">Segundo apellido: </label><br>
+        <input type="text" id="lastname2" name="lastname2" required><br><br>
+        <input type="submit" value="Enviar (get)" formmethod="get"><br><br>
+        <input type="submit" value="Enviar (post)" formmethod="post"><br><br>
+    </form>
+</body>
+
+</html>

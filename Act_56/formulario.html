@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es-Es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="@mjs">
+    <title>Ejercicio 56 - Formulario Registro</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script>
+        function rellenarFormulario() {
+            document.getElementById("name").value="@mjs";
+            document.getElementById("psw").value="153264";
+            document.getElementById("mail").value="alumno@core.com";
+            document.getElementById("mobile").value="153-428-796";
+            document.getElementById("web").value="https://www.index.com";
+            document.getElementById("age").value="34";
+            document.getElementById("color").value="#f0f0f0";
+            document.getElementById("date").value="2026-03-10";
+            document.getElementById("hour").value="10:15";
+            document.getElementById("localtime").value="2026-02-26T10:13";
+            document.getElementById("month").value="2026-04";
+            document.getElementById("week").value="2026-W11";
+            document.getElementById("male").checked=true;
+            document.getElementById("UF1302").checked=true;
+            document.getElementById("UF1303").checked=true;
+            document.getElementById("countries").value="norway";
+            document.getElementById("webs").value="opera";
+            document.getElementById("commentSection").value="Comentario estándar";
+            document.getElementById("search").value="plataforma";
+            document.getElementById("satisfaction").value="7";
+        }
+    </script>
+</head>
+
+<body class="form">
+    <div>
+        <h1>Registro en Plataforma Educativa</h1>
+        <a href="index.html">Volver a la página principal.</a>
+    </div>
+    <form action="https://jsonplaceholder.typicode.com/users/" method="post"
+        onsubmit="alert('Formulario enviado correctamente.')" onreset="alert('Datos borrados')" id="formulario"
+        target="_blank" autocomplete="on" accept-charset="UTF-8" enctype="application/x-www-form-urlencoded">
+        <fieldset>
+            <legend>Datos personales</legend>
+            <label for="name">Nombre: </label>
+            <input type="text" id="name" name="name" placeholder="Introduce su nombre" required><br>
+            <label for="psw">Contraseña: </label>
+            <input type="password" id="psw" name="psw" placeholder="Indique su contraseña" required><br>
+            <label for="mail">Correo electrónico: </label>
+            <input type="email" id="mail" name="mail" pattern="^[a-z]+@[a-z]+\.com$" placeholder="example@example.com"
+                required><br>
+            <label for="mobile">Teléfono: </label>
+            <input type="tel" id="mobile" name="mobile" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"
+                placeholder="Ej: 123-456-789" required><br>
+            <label for="web">Página web: </label>
+            <input type="url" id="web" name="web" pattern="^https://.+$" placeholder="https://"><br>
+            <label for="age">Edad: </label>
+            <input type="number" id="age" name="age" step="1" min="16" max="41" placeholder="A partir de 16 años"><br>
+            <label for="color">Color favorito: </label>
+            <input type="color" id="color" name="color" value="#FA8072">
+        </fieldset>
+        <fieldset>
+            <legend>Información temporal</legend>
+            <label for="date">Fecha: </label>
+            <input type="date" id="date" name="date" required><br>
+            <label for="hour">Hora: </label>
+            <input type="time" id="hour" name="hour" required><br>
+            <label for="localtime">Fecha y hora: </label>
+            <input type="datetime-local" id="localtime" name="localtime" required><br>
+            <label for="month">Mes: </label>
+            <input type="month" id="month" name="month" required><br>
+            <label for="week">Semana: </label>
+            <input type="week" id="week" name="week" required><br>
+        </fieldset>
+        <fieldset>
+            <legend>Información académica</legend>
+            <label>Sexo: </label><br>
+            <label for="male">Hombre</label>
+            <input type="radio" id="male" name="genre">
+            <label for="female">Mujer</label>
+            <input type="radio" id="female" name="genre">
+            <label for="other">Otro</label>
+            <input type="radio" id="other" name="genre"><br>
+            <label>Unidades formativas cursadas: </label><br>
+            <label for="UF1302">UF1302</label>
+            <input type="checkbox" id="UF1302" name="UF1302">
+            <label for="UF1303">UF1303</label>
+            <input type="checkbox" id="UF1303" name="UF1303">
+            <label for="UF1304">UF1304</label>
+            <input type="checkbox" id="UF1304" name="UF1304"><br>
+        </fieldset>
+        <fieldset>
+            <legend>Preferencias tecnológicas</legend>
+            <label for="countries">País de residencia: </label>
+            <select name="country" id="countries">
+                <optgroup label="Europa">
+                    <option value="spain">España</option>
+                    <option value="italy">Italia</option>
+                    <option value="greece">Grecia</option>
+                    <option value="portugal">Portugal</option>
+                    <option value="belgium">Bélgica</option>
+                    <option value="norway">Noruega</option>
+                </optgroup>
+                <optgroup label="Asia">
+                    <option value="japan">Japón</option>
+                    <option value="southKorea">Corea del Sur</option>
+                    <option value="china">China</option>
+                    <option value="vietnam">Vietnam</option>
+                    <option value="thailand">Tailandia</option>
+                </optgroup>
+                <optgroup label="Latam">
+                    <option value="colombia">Colombia</option>
+                    <option value="venezuela">Venezuela</option>
+                    <option value="mexico">México</option>
+                    <option value="ecuador">Ecuador</option>
+                    <option value="jamaica">Jamaica</option>
+                    <option value="brasil">Brasil</option>
+                </optgroup>
+            </select><br>
+            <label for="webs">Navegador web favorito: </label>
+            <input type="text" id="webs" name="webs" list="webList">
+            <datalist id="webList">
+                <option value="googleChrome">Google Chrome</option>
+                <option value="duckDuckGo">Duck Duck GO</option>
+                <option value="firefox">Firefox</option>
+                <option value="opera">Opera</option>
+            </datalist>
+            <input type="hidden" name="hidden" value="easter egg">
+        </fieldset>
+        <fieldset>
+            <legend>Información adicional</legend>
+            <label for="commentSection">Comentarios del estudiante: </label><br>
+            <textarea name="comment" id="commentSection" form="formulario" maxlength="500" cols="40" rows="5"
+                placeholder="Deja tu comentario:"></textarea><br>
+            <label for="file1">Subida de archivo archivo: </label>
+            <input type="file" id="file1" name="file1"><br>
+            <label for="search">Buscar: </label>
+            <input type="search" id="search" name="search" placeholder="Search..."><br>
+            <label for="satisfaction">Nivel de satisfacción (0-10): </label>
+            <input type="range" id="satisfaction" name="satisfaction" min="0" max="10">
+        </fieldset>
+        <div>
+            <button type="button" onclick="rellenarFormulario()"><img src="images/loadButton.png" alt="Cargar" width="200"></button>
+            <input type="image" src="images/submitButton.png" alt="Submit" width="200">
+            <button type="reset"><img src="images/resetButton.png" alt="Reset" width="200"></button><br>
+            <input type="submit" value="Enviar sin validar" formnovalidate>
+            <input type="button" onclick="alert('Completa el formulario')" value="Mensaje"><br>
+            <a href="index.html">Volver a la página principal.</a>
+        </div>
+    </form>
+</body>
+
+</html>

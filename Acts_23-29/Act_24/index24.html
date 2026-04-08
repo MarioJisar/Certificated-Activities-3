@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es-Es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="@mjs">
+    <title>Ejercicio 24 - Formulario</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <form action="https://jsonplaceholder.typicode.com/users" method="post" target="_blank"
+        onsubmit="alert('Datos enviados')" onreset="alert('Datos borrados')">
+        <fieldset>
+            <legend>Datos personales</legend>
+
+            <label for="documento">DNI|NIE|CIF:</label>
+            <input type="text" id="documento" name="document" required><br>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="name"><br>
+            <label for="primerApellido">Primer apellido:</label>
+            <input type="text" id="primerApellido" name="firstLastname"><br>
+            <label for="segundoApellido">Segundo apellido:</label>
+            <input type="text" id="segundoApellido" name="secondLastname"><br>
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="adress"><br>
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" name="city"><br>
+            <label for="cp">Código postal:</label>
+            <input type="number" id="cp" name="cp"><br>
+            <label for="provincia">Provincia:</label>
+            <input type="text" id="provincia" name="province"><br>
+            <label for="pais">País:</label>
+            <input type="text" id="pais" name="country"><br>
+            <label for="telefonoFijo">Teléfono fijo:</label>
+            <input type="number" id="telefonoFijo" name="landline"><br>
+            <label for="telefonoMovil">Teléfono móvil:</label>
+            <input type="number" id="telefonoMovil" name="mobile"><br>
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="email"><br>
+            <button type="submit">Enviar</button>
+            <button type="reset">Borrar</button>
+            <button type="submit" onclick="alert('Mensaje de alerta!!')">Mensaje de alerta</button>
+        </fieldset>
+    </form>
+</body>
+
+</html>

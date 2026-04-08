@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es-Es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="@mjs">
+    <title>Ejercicio 27 - Formularios</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <h1>¡Qué hambre!</h1>
+    <form action="https://jsonplaceholder.typicode.com/users" method="post">
+        <label for="lista1"><strong>Lista desplegable básica de comida:</strong></label><br><br>
+        <select name="lista1" id="lista1">
+            <option value="hamburguesa">Hamburguesa</option>
+            <option value="pizza">Pizza</option>
+            <option value="pasta">Pasta</option>
+            <option value="pescado">Pescado</option>
+            <option value="carne">Carne</option>
+            <option value="cocido">Cocido</option>
+            <option value="tortilla">Tortilla</option>
+        </select><br><br>
+        <input type="submit" value="Enviar"><br><br>
+        
+        <label for="lista2"><strong>Lista con opción preseleccionada de comida:</strong></label><br><br>
+        <select name="lista2" id="lista2">
+            <option value="hamburguesa">Hamburguesa</option>
+            <option value="pizza">Pizza</option>
+            <option value="pasta">Pasta</option>
+            <option value="pescado">Pescado</option>
+            <option value="carne">Carne</option>
+            <option value="cocido" selected>Cocido</option>
+            <option value="tortilla">Tortilla</option>
+        </select><br><br>
+        <input type="submit" value="Enviar"><br><br>
+
+        <label for="lista3"><strong>Lista con tamaño de 4 opciones de comida:</strong></label><br><br>
+        <select name="lista3" id="lista3" size="4">
+            <option value="hamburguesa">Hamburguesa</option>
+            <option value="pizza">Pizza</option>
+            <option value="pasta">Pasta</option>
+            <option value="pescado">Pescado</option>
+            <option value="carne">Carne</option>
+            <option value="cocido">Cocido</option>
+            <option value="tortilla">Tortilla</option>
+        </select><br><br>
+        <input type="submit" value="Enviar"><br><br>
+
+        <label for="lista4"><strong>Lista con tamaño de 4 opciones múltiples de comida:</strong></label><br><br>
+        <select name="lista4" id="lista4" size="4" multiple>
+            <option value="hamburguesa">Hamburguesa</option>
+            <option value="pizza">Pizza</option>
+            <option value="pasta">Pasta</option>
+            <option value="pescado">Pescado</option>
+            <option value="carne">Carne</option>
+            <option value="cocido">Cocido</option>
+            <option value="tortilla">Tortilla</option>
+        </select><br><br>
+        <input type="submit" value="Enviar"><br><br>
+    </form>
+</body>
+
+</html>

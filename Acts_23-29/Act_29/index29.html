@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es-Es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="@mjs">
+    <title>Ejercicio 29 - Formularios</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <h1>¡Qué hambre!</h1>
+    <form action="https://jsonplaceholder.typicode.com/users" method="post"
+        onsubmit="alert('Receta seleccionada correctamente.')">
+        <label for="listaComida"><strong>Lista desplegable básica de recetas:</strong></label><br><br>
+        <select name="listaComida" id="listaComida">
+            <optgroup label="Comida mediterránea">
+                <option value="pizza">Pizza</option>
+                <option value="pasta">Pasta</option>
+                <option value="pescado">Pescado</option>
+                <option value="carne">Carne</option>
+                <option value="cocido">Cocido</option>
+                <option value="tortilla">Tortilla</option>
+                <option value="paella">Paella</option>
+                <option value="risotto">Risotto</option>
+                <option value="lasana">Lasaña</option>
+                <option value="ensalada_cesar">Ensalada césar</option>
+                <option value="ensalada_griega">Ensalada griega</option>
+                <option value="gazpacho">Gazpacho</option>
+                <option value="salmorejo">Salmorejo</option>
+                <option value="croquetas">Croquetas</option>
+                <option value="empanadas">Empanadas</option>
+                <option value="pollo_asado">Pollo asado</option>
+                <option value="albondigas">Albóndigas</option>
+                <option value="lentejas">Lentejas</option>
+                <option value="fabada">Fabada</option>
+                <option value="migas">Migas</option>
+                <option value="huevos_rotos">Huevos rotos</option>
+                <option value="patatas_bravas">Patatas bravas</option>
+                <option value="crema_calabaza">Crema de calabaza</option>
+                <option value="ratatouille">Ratatouille</option>
+                <option value="shawarma">Shawarma</option>
+                <option value="canelones">Canelones</option>
+                <option value="arroz_negro">Arroz negro</option>
+                <option value="risotto_setas">Risotto de setas</option>
+                <option value="ensaladilla_rusa">Ensaladilla rusa</option>
+                <option value="bocata_calamares">Bocata de calamares</option>
+            <optgroup label="Comida asiática">
+                <option value="sushi">Sushi</option>
+                <option value="ramen">Ramen</option>
+                <option value="pollo_curry">Pollo al curry</option>
+                <option value="sopa_verduras">Sopa de verduras</option>
+                <option value="arroz_tres_delicias">Arroz tres delicias</option>
+                <option value="pollo_teriyaki">Pollo teriyaki</option>
+                <option value="falafel">Falafel</option>
+                <option value="hummus">Hummus</option>
+            <optgroup label="Comida americana" disabled>
+                <option value="hamburguesa">Hamburguesa</option>
+                <option value="arepas">Arepas</option>
+                <option value="tacos">Tacos</option>
+                <option value="burritos">Burritos</option>
+                <option value="quesadillas">Quesadillas</option>
+                <option value="costillas">Costillas</option>
+                <option value="fajitas">Fajitas</option>
+            </optgroup><br><br>
+        </select>
+        <input type="submit" value="Enviar"><br><br>
+    </form>
+    
+    <script>
+        console.log('Documento cargado correctamente.')
+    </script>
+</body>
+
+</html>

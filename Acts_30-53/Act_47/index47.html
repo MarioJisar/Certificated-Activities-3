@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es-Es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="@mjs">
+    <title>Ejercicio 47 - Formularios</title>
+    <link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+
+<body>
+    <h1>Formulario</h1>
+    <form action="https://jsonplaceholder.typicode.com/users" method="post"
+        onsubmit="alert('Formulario enviado correctamente.')">
+        <label for="text1">Definición de formulario: (mínimo 10 caracteres y máximo 100 caracteres)</label><br>
+        <input type="text" id="text1" name="text1" placeholder="Un formulario es..." minlength="10" maxlength="100" required><br>
+        <label for="text2">Definición de formulario: </label><br>
+        <input type="text" id="text2" name="text2" value="Un formulario es ..." readonly><br>
+        <label for="pin1">Introduce un PIN: </label><br>
+        <input type="password" id="pin1" name="pin1" placeholder="PIN" pattern="[0-9]{4}" required><br>
+        <label for="pin2">PIN secreto: </label><br>
+        <input type="password" id="pin2" name="pin2" value="1304" disabled readonly><br>
+        <label for="file1">Seleccione un archivo: </label><br>
+        <input type="file" id="file1" name="file1" required><br>
+        <label for="files2">Seleccione varios archivos: </label><br>
+        <input type="file" id="files2" name="files2" multiple required><br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+
+</html>

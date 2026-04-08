@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es-Es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="@mjs">
+    <title>Ejercicio 39 - Formularios</title>
+    <link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+
+<body>
+    <h1>File</h1>
+    <form action="https://jsonplaceholder.typicode.com/users" method="post"
+        onsubmit="alert('Archivo seleccionado correctamente.')"
+        enctype="multipart/form-data">
+        <label for="file1">Selecciona un archivo: </label><br>
+        <input type="file" id="file1" name="file1"><br><br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+
+</html>

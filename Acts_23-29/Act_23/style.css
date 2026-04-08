@@ -1,0 +1,14 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+label,
+input,
+button {
+    margin: 10px;
+}
+
+form {
+    background-image: url(images/pixelart.gif);
+    background-size: 100% 100%;
+}
