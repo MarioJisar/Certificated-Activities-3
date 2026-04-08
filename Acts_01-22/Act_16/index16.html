@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es-Es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="@mjs">
+    <title>Ejercicio 16 - Formulario</title>
+    <link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+
+<body>
+    <form action="archivoDestino.php" method="post" target="_blank" autocomplete="on" novalidate>
+        <h1>Formulario</h1>
+
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre"><br>
+        <label for="primerApellido">Primer apellido:</label><br>
+        <input type="text" id="primerApellido" name="primerApellido"><br>
+        <label for="segundoApellido">Segundo apellido:</label><br>
+        <input type="text" id="segundoApellido" name="segundoApellido"><br>
+        <input type="submit" value="Enviar">
+
+        <p><strong>Nota informativa:</strong>El atributo novalidate indica que las entradas del formulario no deben validarse automáticamente.</p>
+    </form>
+</body>
+
+</html>

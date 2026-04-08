@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es-Es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="@mjs">
+    <title>Ejercicio 14 - Formulario</title>
+    <link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+
+<body>
+    <form action="archivoDestino.php" method="post" target="_blank">
+        <h1>Formulario</h1>
+
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre"><br>
+        <label for="primerApellido">Primer apellido:</label><br>
+        <input type="text" id="primerApellido" name="primerApellido"><br>
+        <label for="segundoApellido">Segundo apellido:</label><br>
+        <input type="text" id="segundoApellido" name="segundoApellido"><br>
+        <input type="submit" value="Enviar">
+
+        <p><strong>Nota informativa (i):</strong>Los datos de este formulario se enviarán utilizando el método POST.</p>
+    </form>
+</body>
+
+</html>
