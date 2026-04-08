@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es-Es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="@mjs">
+    <title>Ejercicio 41 - Formularios</title>
+</head>
+
+<body
+    style="text-align: center; background-image: url(images/paradise.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; padding: 10px;">
+    <h1 style="background-color: rgb(173, 216, 230, 0.65);">Number</h1>
+    <form action="https://jsonplaceholder.typicode.com/users" method="post"
+        onsubmit="alert('Número seleccionado correctamente.')"
+        style="background-color: rgb(173, 216, 230, 0.65); padding: 10px;">
+        <label for="number1">Elige un número: </label><br>
+        <input type="number" id="number1" name="number1" min="0" max="999">
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+
+</html>

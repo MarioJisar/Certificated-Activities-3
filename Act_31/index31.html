@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es-Es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="@mjs">
+    <title>Ejercicio 31 - Formularios</title>
+</head>
+
+<body style="text-align: center; background-image: url(images/paradise.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; padding: 10px;">
+    <h1 style="background-color: rgb(173, 216, 230, 0.65);">Color</h1>
+    <form action="https://jsonplaceholder.typicode.com/users" method="post"
+        onsubmit="alert('Color seleccionado correctamente.')" style="background-color: rgb(173, 216, 230, 0.65); padding: 10px;">
+        <label for="colorfav">Seleccione un color: </label>
+        <input type="color" id="colorfav" name="colorfav" value="#ffffff"><br><br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es-Es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="@mjs">
+    <title>Ejercicio 43 - Formularios</title>
+</head>
+
+<body
+    style="text-align: center; background-image: url(images/paradise.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; padding: 10px;">
+    <h1 style="background-color: rgb(173, 216, 230, 0.65);">Search</h1>
+    <form action="https://jsonplaceholder.typicode.com/users" method="get"
+        onsubmit="alert('Consulta realizada correctamente.')"
+        style="background-color: rgb(173, 216, 230, 0.65); padding: 10px;">
+        <label for="busqueda">Busca en la base de datos: </label><br>
+        <input type="search" id="busqueda" name="busqueda" placeholder="Buscar...">
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+
+</html>

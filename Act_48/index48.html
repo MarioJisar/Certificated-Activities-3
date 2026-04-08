@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es-Es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="@mjs">
+    <title>Ejercicio 48 - Formularios</title>
+</head>
+
+<body
+    style="text-align: center; background-image: url(images/paradise.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; padding: 10px;">
+    <h1 style="background-color: rgb(173, 216, 230, 0.65);">Formulario</h1>
+
+    <div style="background-color: rgb(173, 216, 230, 0.65); padding: 10px;">
+
+        <div>
+            <label for="user">Usuario: </label><br>
+            <input type="text" id="user" name="user" form="login" required>
+        </div>
+
+        <br>
+
+        <form action="https://jsonplaceholder.typicode.com/users" method="post"
+            onsubmit="alert('Formulario enviado correctamente.')" id="login">
+            <input type="submit" value="Enviar">
+        </form>
+
+        <br>
+
+        <div>
+            <label for="psw">Contraseña: </label><br>
+            <input type="password" id="psw" name="psw" form="login" required>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es-Es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="@mjs">
+    <title>Ejercicio 06 - Formulario</title>
+</head>
+
+<body>
+    <h1>Formulario</h1>
+
+    <form action="#" method="post">
+        <table>
+            <tr>
+                <td>
+                    <fieldset>
+                        <legend>Datos personales</legend>
+
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre"><br>
+
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email"><br>
+
+                        <label for="fechaNacimiento">Fecha de nacimiento:</label>
+                        <input type="date" id="fechaNacimiento" name="fechaNacimiento"><br>
+                    </fieldset>
+                </td>
+                <td>
+                    <fieldset>
+                        <legend>Datos académicos</legend>
+
+                        <label for="titulo">Título:</label>
+                        <input type="text" id="titulo" name="titulo"><br>
+
+                        <label for="finalYear">Año finalización:</label>
+                        <input type="number" id="finalYear" name="finalYear"><br>
+
+                        <label for="universidad">Universidad:</label>
+                        <input type="text" id="universidad" name="universidad"><br>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <fieldset disabled>
+                        <legend>Datos personales</legend>
+
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre"><br>
+
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email"><br>
+
+                        <label for="fechaNacimiento">Fecha de nacimiento:</label>
+                        <input type="date" id="fechaNacimiento" name="fechaNacimiento"><br>
+                    </fieldset>
+                </td>
+                <td>
+
+                    <fieldset disabled>
+                        <legend>Datos académicos</legend>
+
+                        <label for="titulo">Título:</label>
+                        <input type="text" id="titulo" name="titulo"><br>
+
+                        <label for="finalYear">Año finalización:</label>
+                        <input type="number" id="finalYear" name="finalYear"><br>
+
+                        <label for="universidad">Universidad:</label>
+                        <input type="text" id="universidad" name="universidad"><br>
+                    </fieldset>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

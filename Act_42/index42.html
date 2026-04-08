@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es-Es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="@mjs">
+    <title>Ejercicio 42 - Formularios</title>
+</head>
+
+<body
+    style="text-align: center; background-image: url(images/paradise.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; padding: 10px;">
+    <h1 style="background-color: rgb(173, 216, 230, 0.65);">Range</h1>
+    <form action="https://jsonplaceholder.typicode.com/users" method="post"
+        onsubmit="alert('Número seleccionado correctamente.')"
+        style="background-color: rgb(173, 216, 230, 0.65); padding: 10px;">
+        <label for="number1">Ponga su número de teléfono: </label><br>
+        <input type="range" id="number1" name="number1" min="600000000" max="799999999">
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+
+</html>

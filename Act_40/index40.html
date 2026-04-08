@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es-Es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="@mjs">
+    <title>Ejercicio 40 - Formularios</title>
+</head>
+
+<body
+    style="text-align: center; background-image: url(images/paradise.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; padding: 10px;">
+    <h1 style="background-color: rgb(173, 216, 230, 0.65);">File</h1>
+    <form action="https://jsonplaceholder.typicode.com/users" method="post"
+        onsubmit="alert('Archivo seleccionado correctamente.')"
+        style="background-color: rgb(173, 216, 230, 0.65); padding: 10px;">
+        <label for="file1">Selecciona un archivo: </label><br>
+        <input type="file" id="file1" name="file1"><br><br>
+        <input type="hidden" name="oculto" id="oculto"
+            value="2.7182818284590452353602874713526624977572470936999595749669676277240766303535475945713821785251664274...">
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+
+</html>

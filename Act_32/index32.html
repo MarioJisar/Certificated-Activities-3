@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es-Es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="@mjs">
+    <title>Ejercicio 32 - Formularios</title>
+</head>
+
+<body style="text-align: center; background-image: url(images/paradise.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; padding: 10px;">
+    <h1 style="background-color: rgb(173, 216, 230, 0.65);">Date</h1>
+    <form action="https://jsonplaceholder.typicode.com/users" method="post"
+        onsubmit="alert('Fechas seleccionadas correctamente.')" style="background-color: rgb(173, 216, 230, 0.65); padding: 10px;">
+        <label for="birthDate">Seleccione una fecha: </label>
+        <input type="date" id="birthDate" name="birthDate" required><br><br>
+        <label for="date1">Seleccione una fecha a partir del 18/noviembre/2011: </label>
+        <input type="date" id="date1" name="date1" min="2011-11-18" required><br><br>
+        <label for="date2">Seleccione una fecha hasta el 03/marzo/2026: </label>
+        <input type="date" id="date2" name="date2" max="2026-03-03" required><br><br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+
+</html>

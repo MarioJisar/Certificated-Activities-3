@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es-Es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="@mjs">
+    <title>Ejercicio 45 - Formularios</title>
+</head>
+
+<body
+    style="text-align: center; background-image: url(images/paradise.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; padding: 10px;">
+    <h1 style="background-color: rgb(173, 216, 230, 0.65);">Time</h1>
+    <form action="https://jsonplaceholder.typicode.com/users" method="post"
+        onsubmit="alert('Consulta realizada correctamente.')"
+        style="background-color: rgb(173, 216, 230, 0.65); padding: 10px;">
+        <label for="time1">Indique una hora: </label><br>
+        <input type="time" id="time1" name="time1" required><br>
+        <label for="time2">Indique una hora entre las 07:35 y las 22:54 con franjas de 3'43": </label><br>
+        <input type="time" id="time2" name="time2" min="07:35" max="22:54" step="223" required><br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+
+</html>
